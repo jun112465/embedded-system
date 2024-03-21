@@ -21,16 +21,22 @@ int main(){
         dup2(fd[1], 1);
         close(fd[1]);
 
+        // pipe waiting 
+        sleep(3);
+
         // pipe will get this data
         printf("[%d] : Hello From Child Process\n", getpid());
         printf("[%d] : Good Bye~ From Child Process\n", getpid());
 
         exit(0);
     }else{
-        wait(&status);
+        //wait(&status);
         printf("fd[1] : %d\n", fd[1]);
         printf("STDOUT_FILENO : %d\n", STDOUT_FILENO);
         close(fd[1]);
+
+        // child process에서 데이터를 3초 후에 보내기 때문에 3초 후에 실행된다.
+        printf("start while from parent process\n");
         while((n = read(fd[0], line, MAXLINE))>0){
             line[n] = '\0';
             write(STDOUT_FILENO, line, n);
