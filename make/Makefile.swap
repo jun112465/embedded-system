@@ -1,0 +1,17 @@
+output : game.o coding.o webtoon.o main.o
+	gcc -o output game.o coding.o webtoon.o main.o
+
+webtoon.o : webtoon.c
+	gcc -c -o webtoon.o webtoon.c
+
+game.o : game.c
+	gcc -c -o game.o game.c
+
+coding.o : coding.c
+	gcc -c -o coding.o coding.c
+  
+main.o : main.c
+	gcc -c -o main.o main.c
+  
+clean : 
+	rm *.o output
