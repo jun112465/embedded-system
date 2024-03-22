@@ -18,7 +18,7 @@
     - 파일 시스템을 시스템의 특정 디렉토리에 연결하는 것을 의미
     - 외부 저장 장치(하드 디스크, USB 드라이브 등)나 네트워크 리소스(네트워크 파일 시스템)를 시스템에 연결하여 사용할 수 있다.
     - 명령어
-        - **mount [option] <device or file system> <location to mount>**
+        - **mount [option] \<device or file system\> \<location to mount\>**
         - **mount /dev/sdb1 /mnt/usb"**
         - 위 명령은 '/dev/sdb1/'이라는 장치를 '/mnt/usb'라는 디렉토리에 연결한다. 이제 usb 플래시 드라이브의 내용을 '/mnt/usb'를 통해 읽고 쓸 수 있다. 
   
