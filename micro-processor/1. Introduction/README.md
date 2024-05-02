@@ -1,6 +1,15 @@
 # 아두이노 보드 구성
 ![alt text](image.png)
 
+# ARM Cortex M3 NXP Board
+![alt text](image-1.png)
+- LPC1768 : MCU다. 보드의 가장 핵심적인 기능을 하는 부분이다. 이 칩에 의해서 모든 프로그램들이 실행된다.
+- JTAG Port : PC와 연결하여 debug
+- CAN : CAN 통신, 다른 보드와의 연결
+- External IO A/B/C : 외부 device를 붙일 수 있는 확장 I/O slot
+
+![alt text](image-2.png)
+
 # ARM이란? 
 - Advanced RISC Machine
 

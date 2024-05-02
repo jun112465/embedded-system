@@ -19,3 +19,32 @@
 ![alt text](image.png)
 - 가장 간단한 형태의 Flip Flop이라는 것은 실은 NOR gate 두개의 output을 서로의 input으로 다시 feed back 하는 형태로 생겼습니다. R-S (Reset Set) F/F라고 부르기도 합니다. 잘 보시면, Data In은 data input이고, write는 Write Enable이라고 해서 Write TRUE가 되어야 Data In을 위쪽 AND gate나 아래쪽 AND gate로 넣을 수가 있습니다.
 
+### 회로 이해하기
+- write 신호는 항상 1이라고 가정한다.
+    - write 신호가 0일 때는 Q값이 유지된다. 
+- R (Q에 대한 Reset)
+    - 
+- S (Q에 대한 Set)
+
+# Latch (래치)
+![alt text](image-1.png)
+- DI는 Data In, DO는 Data out, W는 Write Enable 신호
+- 뭔가를 잠시 저장하는데 Latch들을 이용. 
+- DO에 뭔가 Data processing 회로를 달아서 DO가 TRUE가 되는 순간 뭔가 일을 할 수 있게도 한다. 
+- 이런걸 일컬어 **Level Trigger Latch**라고도 한다. 
+
+# edge trigger latch 
+![alt text](image-2.png)
+
+
+# 레지스터 종류
+- General Purpose Register
+    - Address Register
+    - Data Register
+    - Instruction Pipeline Register
+
+- Special Purpose Register
+    - Program Counter
+    - Linked Register
+    - Status Register
+    - I/O Register
