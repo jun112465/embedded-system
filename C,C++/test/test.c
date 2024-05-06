@@ -13,9 +13,25 @@ int main(){
     */
 
     // check static
+    /*
     static int a = 1;
     a = 3;
     printf("%d", a);
+    */
+
+    // check struct init
+    struct a
+    {
+        int a;
+        int b;
+        int c;
+        char d;
+        double e;
+    };
+
+    struct a TEST = {0};
+
+    printf("%d %d %d %c %lf\n", TEST.a, TEST.b, TEST.c, TEST.d, TEST.e);
 
     return 0;
 }

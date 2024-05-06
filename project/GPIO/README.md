@@ -11,7 +11,7 @@
     - GPIO를 출력으로 설정하면 해당 핀에서 전압을 생성하여 외부에 신호를 보낼 수 있다.
     - LED를 켜거나 다른 디지털 장치를 제어할 때 사용할 수 있다.
     - 출력으로 설정된 GPIO 핀은 프로그램에서 제어하여 해당 핀에 전압을 인가하거나 인가하지 않을 수 있다. 
-    
+
 # GPIO 제어 과정
 ![alt text](image.png)
 
@@ -34,3 +34,28 @@
     - 크게 AHB(Advanced High performance Bus), APB2, APB1 3개의 버스에 물려있는 장치들에게 공급
 
 
+
+# GPIO_PORT 구조체
+``` c
+typedef struct
+{
+  __IO uint32_t CRL;
+  __IO uint32_t CRH;
+  __IO uint32_t IDR;
+  __IO uint32_t ODR;
+  __IO uint32_t BSRR;
+  __IO uint32_t BRR;
+  __IO uint32_t LCKR;
+} GPIO_TypeDef;
+```
+- 주어진 코드는 STM32와 같은 임베디드 시스템에서 GPIO 포트를 제어하기 위한 레지스터들을 묶어둔 구조체
+- 이 구조체는 GPIO 포트의 여러 레지스터를 포함하고 있다. 각 레지스터는 GPIO 포트의 특정 기능을 제어한다.
+- `CRL`: 포트의 하위 레지스터(Control Register Low)로, 포트의 핀 0부터 7까지의 설정을 관리한다.
+- `CRH`: 포트의 상위 레지스터(Control Register High)로, 포트의 핀 8부터 15까지의 설정을 관리한다.
+- `IDR`: 입력 데이터 레지스터(Input Data Register)로, 포트의 현재 입력 상태를 읽는다. 
+- `ODR`: 출력 데이터 레지스터(Output Data Register)로, 포트의 출력 상태를 설정한다.
+- `BSRR`: 비트 설정 및 리셋 레지스터(Bit Set/Reset Register)로, 특정 비트를 설정하거나 리셋한다.
+- `BRR`: 비트 리셋 레지스터(Bit Reset Register)로, 특정 비트를 리셋한다.
+- `LCKR`: 락 레지스터(Lock Register)로, GPIO 포트의 설정을 잠그거나 해제한다.
+
+이러한 레지스터들은 GPIO 포트의 동작을 제어하고, 입력 및 출력 상태를 설정하여 외부 장치와의 통신을 담당합니다. 이 구조체를 사용하면 각 레지스터에 직접 접근하여 GPIO 포트를 제어할 수 있습니다.
