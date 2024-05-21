@@ -30,4 +30,24 @@
     - 증폭기능 : 활성 영역을 사용하며 B에 인가하는 아주 작은 양의 전압 변화량에 맞춰 C와 E사이에 흐르는 전류가 큰 폭으로 들쭉날쭉 변화하는 현상을 이용해 구현한다. 
     - 스위칭 기능 : 차단영역을 0, 포화영역을 1이라고 정의하면 회로의 On/Off를 정의할 수 있다. 
 
- 
+
+# FET & BJT
+![alt text](image-2.png)
+- FET (Field-Effect Transistor)
+    - 전계효과트랜지스터 : 입력 전압에 의해서 전류가 조절되는 소자. 
+    - Gate
+    - Drain
+    - Source
+    - Gate 전압에 의해 N과 P의 접합부에 공핍층이 발생하여 Channel의 폭이 넓어졌다 좁아졌다 하기 때문에 흐르는 전류가 제어된다. 
+    - 전류 : Drain -> Source
+
+
+- BJT (Bipolar Junction Transistor)
+    - Base
+    - Collector
+    - Emitter
+    - Base와 Emitter의 전류에 의해 Emitter의 전자가 Base로 이동하는데 상대적으로 높은 전압이 걸린 Collector로 많은 전자가 이동한다
+    - 전류 : Collector -> Emitter
+
+
+# Push-Pull OR Open Drain
